@@ -253,6 +253,10 @@ delete-multinet:
 	  done ;\
 	)
 
+.PHONY: util
+util:
+	@mkdir -p util/bin
+	go build -o util/bin/dbghelper util/dbghelper.go
 
 .PHONY: go-check
 go-check: go-lint
